@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\views\\documents\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documents\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\views\\documents\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documents\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +31,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAqwCMAAAAdAAAAAAAAAA==",
+              "Title": "DocumentsController.cs",
+              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Controllers\\DocumentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DocumentsController.cs",
+              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Controllers\\DocumentsController.cs",
+              "RelativeToolTip": "Controllers\\DocumentsController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAADwv38AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T12:23:47.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Documents\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Documents\\Edit.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-18T11:39:21.218Z",
+              "WhenOpened": "2026-01-18T12:22:32.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Documents\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Create.cshtml",
+              "RelativeToolTip": "Views\\Documents\\Create.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-18T12:19:21.286Z",
               "EditorCaption": ""
             }
           ]

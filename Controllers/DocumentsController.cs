@@ -1,19 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Projekt_Zaliczeniowy_PZ.Data;
 using Projekt_Zaliczeniowy_PZ.Models;
+using Projekt_Zaliczeniowy_PZ.DTOs;
 
 namespace Projekt_Zaliczeniowy_PZ.Controllers
 {
     public class DocumentsController : Controller
     {
         private readonly ApplicationDbContext _context;
-
+        private string GetUserId()
+        {
+            return User.FindFirstValue(ClaimTypes.NameIdentifier) ?? string.Empty;
+        }
         public DocumentsController(ApplicationDbContext context)
         {
             _context = context;
@@ -22,7 +27,9 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         // GET: Documents
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Documents.ToListAsync());
+            var applicationDbContext = _context.Documents.Where(e => e.CreatedById == GetUserId());
+            return View(await applicationDbContext.ToListAsync());
+
         }
 
         // GET: Documents/Details/5
@@ -54,8 +61,15 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,CreatedById")] Document document)
+        public async Task<IActionResult> Create([Bind("Id,Title,CreatedById")] DocumentDTO documentDTO)
         {
+            Document document = new Document()
+            {
+                Id = documentDTO.Id,
+                Title = documentDTO.Title,
+                CreatedById = GetUserId()
+            };
+
             if (ModelState.IsValid)
             {
                 _context.Add(document);
@@ -86,31 +100,30 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,CreatedById")] Document document)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,CreatedById")] DocumentDTO documentDTO)
         {
-            if (id != document.Id)
+            if (id != documentDTO.Id)
             {
                 return NotFound();
             }
 
+            Document document = new Document
+            {
+                Id = documentDTO.Id,
+                Title = documentDTO.Title,
+                CreatedById = GetUserId()
+            };
+
+            if (!DocumentExists(document.Id, GetUserId()))
+            {
+                return NotFound();
+            }
+
+
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(document);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!DocumentExists(document.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                _context.Update(document);
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(document);
@@ -149,9 +162,9 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool DocumentExists(int id)
+        private bool DocumentExists(int id, string userId)
         {
-            return _context.Documents.Any(e => e.Id == id);
+            return _context.Documents.Any(e => e.Id == id && e.CreatedById == userId);
         }
     }
 }
