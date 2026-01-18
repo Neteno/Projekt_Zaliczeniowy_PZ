@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Projekt_Zaliczeniowy_PZ
 build_property.RootNamespace = Projekt_Zaliczeniowy_PZ
@@ -22,6 +30,46 @@ build_property.EnableCodeStyleSeverity =
 
 [C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/DocumentPermissions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRQZXJtaXNzaW9uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/DocumentPermissions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRQZXJtaXNzaW9uc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/DocumentPermissions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRQZXJtaXNzaW9uc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/DocumentPermissions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRQZXJtaXNzaW9uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/DocumentPermissions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRQZXJtaXNzaW9uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/Documents/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/Documents/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/Documents/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/Documents/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/Documents/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/Home/Index.cshtml]
@@ -42,6 +90,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/Versionlogs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVyc2lvbmxvZ3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/Versionlogs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVyc2lvbmxvZ3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/Versionlogs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVyc2lvbmxvZ3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/Versionlogs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVyc2lvbmxvZ3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/Versionlogs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVyc2lvbmxvZ3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Szymon/Desktop/Studia/Studia_S5/Programowanie_Zawansowane/Projekt_Zaliczeniowy_PZ/Views/_ViewImports.cshtml]
