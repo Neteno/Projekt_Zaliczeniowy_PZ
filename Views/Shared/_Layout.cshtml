@@ -22,8 +22,17 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        @* <li class="nav-item"> *@
+                        @*     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
+                        @* </li> *@
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Documents" asp-action="Index">Dokument</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="DocumentPermissions" asp-action="Index">Uprawnienia</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="VersionLogs" asp-action="Index">Logi</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />

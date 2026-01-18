@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\controllers\\documentpermissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:controllers\\documentpermissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 240,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DocumentPermissionsController.cs",
-              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Controllers\\DocumentPermissionsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DocumentPermissionsController.cs",
-              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Controllers\\DocumentPermissionsController.cs",
-              "RelativeToolTip": "Controllers\\DocumentPermissionsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-18T11:36:40.09Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DocumentsController.cs",
-              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Controllers\\DocumentsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DocumentsController.cs",
-              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Controllers\\DocumentsController.cs",
-              "RelativeToolTip": "Controllers\\DocumentsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-18T11:36:10.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-18T11:35:14.863Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwCMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-18T11:39:21.218Z",
               "EditorCaption": ""
             }
           ]
