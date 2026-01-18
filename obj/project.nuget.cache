@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "spFVeQ3bRK8=",
+  "dgSpecHash": "fXOFyRoiBRY=",
   "success": true,
   "projectFilePath": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Projekt_Zaliczeniowy_PZ.csproj",
   "expectedPackageFiles": [
@@ -195,7 +195,8 @@
     "C:\\Users\\Szymon\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\Szymon\\.nuget\\packages\\system.text.json\\8.0.6\\system.text.json.8.0.6.nupkg.sha512",
     "C:\\Users\\Szymon\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\Szymon\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    "C:\\Users\\Szymon\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\Szymon\\.nuget\\packages\\tinymce\\8.3.2\\tinymce.8.3.2.nupkg.sha512"
   ],
   "logs": []
 }
