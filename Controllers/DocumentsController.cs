@@ -12,6 +12,8 @@ using Projekt_Zaliczeniowy_PZ.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Projekt_Zaliczeniowy_PZ.Security;
 using Projekt_Zaliczeniowy_PZ.Models.Enums;
+using Ganss.Xss;
+
 
 namespace Projekt_Zaliczeniowy_PZ.Controllers
 {
@@ -36,9 +38,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         {
             var userId = GetUserId();
 
-            var docs = await _context.Documents
-                .AsNoTracking()
-                .Where(d => d.CreatedById == userId || _context.DocumentPermissions.Any(p => p.DocumentId == d.Id && p.UserId == userId)).ToListAsync();
+            var docs = await _context.Documents.AsNoTracking().Where(d => d.CreatedById == userId || _context.DocumentPermissions.Any(p => p.DocumentId == d.Id && p.UserId == userId)).ToListAsync();
 
             return View(docs);
         }
@@ -53,8 +53,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
             if (!await _access.CanViewAsync(id.Value, GetUserId()))
                 return Forbid();
 
-            var document = await _context.Documents
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var document = await _context.Documents.FirstOrDefaultAsync(m => m.Id == id);
             if (document == null)
             {
                 return NotFound();
@@ -79,23 +78,28 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
             if (!ModelState.IsValid)
                 return View(documentDTO);
 
+            var sanitizer = new HtmlSanitizer();
+            var cleanHtml = sanitizer.Sanitize(documentDTO.Content ?? "");
+
+            var userId = GetUserId();
+
             var document = new Document
             {
                 Title = documentDTO.Title,
-                Content = documentDTO.Content,
-                CreatedById = GetUserId()
+                Content = cleanHtml,
+                CreatedById = userId
             };
 
             _context.Documents.Add(document);
-            await _context.SaveChangesAsync(); // <-- TU powstaje document.Id
+            await _context.SaveChangesAsync();
 
             _context.DocumentPermissions.Add(new DocumentPermission
             {
                 DocumentId = document.Id,
-                UserId = GetUserId(),
+                UserId = userId,
                 Role = DocumentRole.Author
             });
-            await _context.SaveChangesAsync(); // <-- zapis uprawnień
+            await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }

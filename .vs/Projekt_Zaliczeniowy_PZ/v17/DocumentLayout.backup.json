@@ -3,52 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\grzeg\\conflu_placz\\projekt_zaliczeniowy_pz\\controllers\\documentpermissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:controllers\\documentpermissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\grzeg\\conflu_placz\\projekt_zaliczeniowy_pz\\views\\documents\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documents\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\grzeg\\conflu_placz\\projekt_zaliczeniowy_pz\\models\\documentpermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:models\\documentpermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\grzeg\\conflu_placz\\projekt_zaliczeniowy_pz\\views\\documents\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documents\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\grzeg\\conflu_placz\\projekt_zaliczeniowy_pz\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\grzeg\\conflu_placz\\projekt_zaliczeniowy_pz\\views\\documentpermissions\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documentpermissions\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Migrations\\20260120201446_Migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260120201446_Migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\grzeg\\conflu_placz\\projekt_zaliczeniowy_pz\\views\\documentpermissions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documentpermissions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\grzeg\\conflu_placz\\projekt_zaliczeniowy_pz\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\grzeg\\conflu_placz\\projekt_zaliczeniowy_pz\\views\\documentpermissions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documentpermissions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Migrations\\20260120182308_Migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260120182308_Migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\grzeg\\conflu_placz\\projekt_zaliczeniowy_pz\\security\\roleseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:security\\roleseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\grzeg\\conflu_placz\\projekt_zaliczeniowy_pz\\views\\documents\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documents\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\grzeg\\conflu_placz\\projekt_zaliczeniowy_pz\\controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\grzeg\\conflu_placz\\projekt_zaliczeniowy_pz\\security\\documentaccessservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:security\\documentaccessservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\grzeg\\conflu_placz\\projekt_zaliczeniowy_pz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,170 +30,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 240,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-20T16:04:16.403Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Document.cs",
-              "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Models\\Document.cs",
-              "RelativeDocumentMoniker": "Models\\Document.cs",
-              "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Models\\Document.cs",
-              "RelativeToolTip": "Models\\Document.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T20:50:45.972Z",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Documents\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Documents\\Edit.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-20T21:45:24.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DocumentPermission.cs",
-              "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Models\\DocumentPermission.cs",
-              "RelativeDocumentMoniker": "Models\\DocumentPermission.cs",
-              "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Models\\DocumentPermission.cs",
-              "RelativeToolTip": "Models\\DocumentPermission.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T20:49:26.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T19:17:30.115Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Views\\DocumentPermissions\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\DocumentPermissions\\Index.cshtml",
-              "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Views\\DocumentPermissions\\Index.cshtml",
-              "RelativeToolTip": "Views\\DocumentPermissions\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAALAAAAAAAAAA==",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Documents\\Details.cshtml",
+              "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Details.cshtml",
+              "RelativeToolTip": "Views\\Documents\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-20T18:45:36.772Z",
+              "WhenOpened": "2026-01-20T21:41:25.394Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "20260120182308_Migrations.cs",
-              "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Migrations\\20260120182308_Migrations.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260120182308_Migrations.cs",
-              "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Migrations\\20260120182308_Migrations.cs",
-              "RelativeToolTip": "Migrations\\20260120182308_Migrations.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T18:23:09.058Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RoleSeeder.cs",
-              "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Security\\RoleSeeder.cs",
-              "RelativeDocumentMoniker": "Security\\RoleSeeder.cs",
-              "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Security\\RoleSeeder.cs",
-              "RelativeToolTip": "Security\\RoleSeeder.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCEAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T18:12:29.06Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Views\\DocumentPermissions\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\DocumentPermissions\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Views\\DocumentPermissions\\Edit.cshtml",
-              "RelativeToolTip": "Views\\DocumentPermissions\\Edit.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-20T18:10:26.821Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Views\\DocumentPermissions\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\DocumentPermissions\\Create.cshtml",
-              "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Views\\DocumentPermissions\\Create.cshtml",
-              "RelativeToolTip": "Views\\DocumentPermissions\\Create.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-20T18:09:58.405Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DocumentPermissionsController.cs",
-              "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Controllers\\DocumentPermissionsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DocumentPermissionsController.cs",
-              "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Controllers\\DocumentPermissionsController.cs",
-              "RelativeToolTip": "Controllers\\DocumentPermissionsController.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAmwAcBAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T18:08:57.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20260120201446_Migrations.cs",
-              "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Migrations\\20260120201446_Migrations.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260120201446_Migrations.cs",
-              "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Migrations\\20260120201446_Migrations.cs",
-              "RelativeToolTip": "Migrations\\20260120201446_Migrations.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T20:14:46.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "DocumentsController.cs",
               "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Controllers\\DocumentsController.cs",
               "RelativeDocumentMoniker": "Controllers\\DocumentsController.cs",
               "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Controllers\\DocumentsController.cs",
               "RelativeToolTip": "Controllers\\DocumentsController.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAmwG4AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwA4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T18:08:01.236Z"
+              "WhenOpened": "2026-01-20T21:34:00.732Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DocumentAccessService.cs",
-              "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Security\\DocumentAccessService.cs",
-              "RelativeDocumentMoniker": "Security\\DocumentAccessService.cs",
-              "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Security\\DocumentAccessService.cs",
-              "RelativeToolTip": "Security\\DocumentAccessService.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAuwD4AAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T18:03:02.708Z"
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Documents\\Create.cshtml",
+              "ToolTip": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Create.cshtml",
+              "RelativeToolTip": "Views\\Documents\\Create.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAC8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-20T21:32:34.286Z",
+              "EditorCaption": ""
             }
           ]
         }

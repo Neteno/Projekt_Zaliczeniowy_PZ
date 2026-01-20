@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "jwcO2XCKu/g=",
+  "dgSpecHash": "rmEK8kFAofc=",
   "success": true,
   "projectFilePath": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Projekt_Zaliczeniowy_PZ.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\grzeg\\.nuget\\packages\\anglesharp\\0.17.1\\anglesharp.0.17.1.nupkg.sha512",
+    "C:\\Users\\grzeg\\.nuget\\packages\\anglesharp.css\\0.17.0\\anglesharp.css.0.17.0.nupkg.sha512",
     "C:\\Users\\grzeg\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\grzeg\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\grzeg\\.nuget\\packages\\htmlsanitizer\\8.1.870\\htmlsanitizer.8.1.870.nupkg.sha512",
     "C:\\Users\\grzeg\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\grzeg\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\grzeg\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

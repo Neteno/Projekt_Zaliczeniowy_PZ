@@ -1,5 +1,6 @@
 ﻿@model Projekt_Zaliczeniowy_PZ.Models.Document
 
+
 @{
     ViewData["Title"] = "Create";
 }
@@ -9,25 +10,62 @@
 <h4>Document</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
+    <div class="col-12">
+        <form asp-action="Create" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+
+            <div class="form-group mb-3">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Content" class="control-label"></label>
+                <textarea asp-for="Content" class="form-control" id="contentEditor" rows="18"></textarea>
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-outline-secondary ms-2">Back to List</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+        tinymce.init({
+            selector: '#contentEditor',
+            width: '100%',
+            min_height: 300,
+
+            toolbar_location: 'left',
+            toolbar_mode: 'sliding',
+
+            menubar: false,
+            plugins: 'lists link table code autoresize searchreplace visualblocks wordcount',
+
+            toolbar:
+                'undo redo | blocks | bold italic underline strikethrough | ' +
+                'bullist numlist | outdent indent | alignleft aligncenter alignright | ' +
+                'link table | removeformat | code',
+
+            content_style: `
+                body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; font-size: 14px; }
+                h1,h2,h3 { font-weight: 600; }
+            `
+        });
+
+        document.querySelector('form[asp-action="Create"]')?.addEventListener('submit', function () {
+            tinymce.triggerSave();
+        });
+    </script>
 }

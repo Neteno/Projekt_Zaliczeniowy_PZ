@@ -16,7 +16,21 @@ html {
   position: relative;
   min-height: 100%;
 }
-
 body {
   margin-bottom: 60px;
 }
+.document-content {
+    line-height: 1.6;
+}
+.document-content img {
+        max-width: 100%;
+        height: auto;
+    }
+.document-content table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+.document-content th, .document-content td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
