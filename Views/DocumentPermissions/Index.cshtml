@@ -5,11 +5,29 @@
 }
 
 <h1>Index</h1>
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+<form method="get" asp-action="Index" class="mb-3">
+    <label class="form-label">Wybierz swój dokument:</label>
+    <select class="form-select" name="documentId" asp-items="ViewBag.MyDocuments" onchange="this.form.submit()">
+        <option value="">-- wybierz --</option>
+    </select>
+</form>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    @if (ViewBag.DocumentId != null)
+    {
+        <a asp-action="Create" asp-route-documentId="@ViewBag.DocumentId">Create New</a>
+    }
+    else
+    {
+        <span>Wybierz dokument z listy, aby zarządzać uprawnieniami.</span>
+    }
 </p>
 <table class="table">
+
     <thead>
         <tr>
             <th>
@@ -25,7 +43,8 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.User.Id)
+                @Html.DisplayFor(modelItem => item.User.Email)
+
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Role)

@@ -38,9 +38,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
 
             var docs = await _context.Documents
                 .AsNoTracking()
-                .Where(d => d.CreatedById == userId
-                    || _context.DocumentPermissions.Any(p => p.DocumentId == d.Id && p.UserId == userId))
-                .ToListAsync();
+                .Where(d => d.CreatedById == userId || _context.DocumentPermissions.Any(p => p.DocumentId == d.Id && p.UserId == userId)).ToListAsync();
 
             return View(docs);
         }
@@ -49,13 +47,11 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         // GET: Documents/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (id == null)
+                return NotFound();
+
             if (!await _access.CanViewAsync(id.Value, GetUserId()))
                 return Forbid();
-
-            if (id == null)
-            {
-                return NotFound();
-            }
 
             var document = await _context.Documents
                 .FirstOrDefaultAsync(m => m.Id == id);
@@ -108,13 +104,11 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         // GET: Documents/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (id == null)
+                return NotFound();
+
             if (!await _access.CanEditAsync(id.Value, GetUserId()))
                 return Forbid();
-
-            if (id == null)
-            {
-                return NotFound();
-            }
 
             var document = await _context.Documents.FindAsync(id);
             if (document == null)

@@ -34,9 +34,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
                 return NotFound();
             }
 
-            var versionlog = await _context.VersionLogs
-                .Include(v => v.Document)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var versionlog = await _context.VersionLogs.Include(v => v.Document).FirstOrDefaultAsync(m => m.Id == id);
             if (versionlog == null)
             {
                 return NotFound();
@@ -130,9 +128,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
                 return NotFound();
             }
 
-            var versionlog = await _context.VersionLogs
-                .Include(v => v.Document)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var versionlog = await _context.VersionLogs.Include(v => v.Document).FirstOrDefaultAsync(m => m.Id == id);
             if (versionlog == null)
             {
                 return NotFound();

@@ -37,17 +37,28 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
 
 
         // GET: DocumentPermissions
-        public async Task<IActionResult> Index(int documentId)
+        public async Task<IActionResult> Index(int? documentId)
         {
-            if (!await _access.IsOwnerAsync(documentId, GetUserId()))
+            var userId = GetUserId();
+
+            var myDocs = await _context.Documents.AsNoTracking().Where(d => d.CreatedById == userId).Select(d => new { d.Id, d.Title }).OrderBy(d => d.Title).ToListAsync();
+
+            ViewBag.MyDocuments = new SelectList(myDocs, "Id", "Title", documentId);
+
+            if (documentId == null)
+            {
+                ViewBag.DocumentId = null;
+                return View(new List<DocumentPermission>());
+            }
+
+            if (!await _access.IsOwnerAsync(documentId.Value, userId))
                 return Forbid();
 
-            var applicationDbContext = _context.DocumentPermissions
-                .Where(p => p.DocumentId == documentId)
-                .Include(d => d.User);
+            ViewBag.DocumentId = documentId.Value;
 
-            ViewBag.DocumentId = documentId;
-            return View(await applicationDbContext.ToListAsync());
+            var perms = await _context.DocumentPermissions.AsNoTracking().Include(p => p.User).Where(p => p.DocumentId == documentId.Value).OrderBy(p => p.User.Email).ToListAsync();
+
+            return View(perms);
         }
 
         // GET: DocumentPermissions/Details/5
@@ -58,9 +69,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
                 return NotFound();
             }
 
-            var documentPermission = await _context.DocumentPermissions
-                .Include(d => d.User)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var documentPermission = await _context.DocumentPermissions.Include(d => d.User).FirstOrDefaultAsync(m => m.Id == id);
             if (documentPermission == null)
             {
                 return NotFound();
@@ -82,7 +91,13 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
 
             ViewData["DocumentId"] = documentId;
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email");
-            return View();
+            ViewData["RoleList"] = new SelectList(new[]
+            {
+                Projekt_Zaliczeniowy_PZ.Models.Enums.DocumentRole.Editor,
+                Projekt_Zaliczeniowy_PZ.Models.Enums.DocumentRole.Viewer
+            });
+
+            return View(new DocumentPermission { DocumentId = documentId });
         }
 
         // POST: DocumentPermissions/Create
@@ -90,48 +105,77 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,DocumentId,UserId,Role")] DocumentPermission documentPermission)
+        public async Task<IActionResult> Create([Bind("DocumentId,UserId,Role")] DocumentPermission documentPermission)
         {
             if (!await _access.IsOwnerAsync(documentPermission.DocumentId, GetUserId()))
                 return Forbid();
 
+            if (documentPermission.DocumentId <= 0)
+                ModelState.AddModelError(nameof(documentPermission.DocumentId), "Brak DocumentId.");
+
             if (documentPermission.Role == Projekt_Zaliczeniowy_PZ.Models.Enums.DocumentRole.Author)
-            {
                 ModelState.AddModelError(nameof(documentPermission.Role), "Nie można nadać roli Author. Właściciel (Author) to twórca dokumentu.");
+
+            var existsUser = await _context.Users.AnyAsync(u => u.Id == documentPermission.UserId);
+            if (!existsUser)
+                ModelState.AddModelError("UserId", "Wybrany użytkownik nie istnieje.");
+
+            if (!ModelState.IsValid)
+            {
+                ViewData["DocumentId"] = documentPermission.DocumentId;
+                ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", documentPermission.UserId);
+                ViewData["RoleList"] = new SelectList(new[]
+                {
+                    Projekt_Zaliczeniowy_PZ.Models.Enums.DocumentRole.Editor,
+                    Projekt_Zaliczeniowy_PZ.Models.Enums.DocumentRole.Viewer
+                }, documentPermission.Role);
+
+                return View(documentPermission);
             }
-            if (ModelState.IsValid)
+
+            var existing = await _context.DocumentPermissions
+                .FirstOrDefaultAsync(p => p.DocumentId == documentPermission.DocumentId &&
+                                          p.UserId == documentPermission.UserId);
+
+            if (existing != null)
+            {
+                existing.Role = documentPermission.Role;
+            }
+            else
             {
                 _context.Add(documentPermission);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index), new { documentId = documentPermission.DocumentId });
-
             }
-            ViewData["DocumentId"] = documentPermission.DocumentId;
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", documentPermission.UserId);
-            return View(documentPermission);
 
+            await _context.SaveChangesAsync();
+            TempData["Success"] = "Uprawnienie zostało zapisane.";
+
+            return RedirectToAction(nameof(Index), new { documentId = documentPermission.DocumentId });
         }
+
 
         // GET: DocumentPermissions/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
-            var documentPermission = await _context.DocumentPermissions.FindAsync(id);
+            var documentPermission = await _context.DocumentPermissions.Include(p => p.User).AsNoTracking().FirstOrDefaultAsync(p => p.Id == id.Value);
+
             if (documentPermission == null)
-            {
                 return NotFound();
-            }
+
             if (!await _access.IsOwnerAsync(documentPermission.DocumentId, GetUserId()))
-            {
                 return Forbid();
-            }
 
             ViewData["DocumentId"] = documentPermission.DocumentId;
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", documentPermission.UserId);
+
+            ViewData["RoleList"] = new SelectList(new List<SelectListItem>
+            {
+                new SelectListItem { Value = Projekt_Zaliczeniowy_PZ.Models.Enums.DocumentRole.Editor.ToString(), Text = "Editor" },
+                new SelectListItem { Value = Projekt_Zaliczeniowy_PZ.Models.Enums.DocumentRole.Viewer.ToString(), Text = "Viewer" }
+            }, "Value", "Text", documentPermission.Role.ToString());
+
+
             return View(documentPermission);
         }
 
@@ -140,45 +184,62 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,DocumentId,UserId,Role")] DocumentPermission documentPermission)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserId,Role")] DocumentPermission documentPermission)
         {
+            Console.WriteLine($"[POST EDIT] ENTER id={id}, model.Id={documentPermission.Id}, model.Role={documentPermission.Role}");
+
             if (id != documentPermission.Id)
             {
                 return NotFound();
             }
-            if (!await _access.IsOwnerAsync(documentPermission.DocumentId, GetUserId()))
+
+            var existing = await _context.DocumentPermissions.Include(p => p.User).FirstOrDefaultAsync(p => p.Id == id);
+
+            if (existing == null)
+            {
+                return NotFound();
+            }
+
+            var userId = GetUserId();
+            var isOwner = await _access.IsOwnerAsync(existing.DocumentId, userId);
+
+            if (!isOwner)
+            {
                 return Forbid();
+            }
 
             if (documentPermission.Role == Projekt_Zaliczeniowy_PZ.Models.Enums.DocumentRole.Author)
             {
-                ModelState.AddModelError(nameof(documentPermission.Role), "Nie można ustawić roli Author. Właściciel dokumentu jest ustalany przez CreatedById.");
+                ModelState.AddModelError(nameof(documentPermission.Role),
+                    "Nie można ustawić roli Author. Właściciel dokumentu jest ustalany przez CreatedById.");
             }
-            if (ModelState.IsValid)
+
+            if (!ModelState.IsValid)
             {
-                try
+                foreach (var kv in ModelState)
                 {
-                    _context.Update(documentPermission);
-                    await _context.SaveChangesAsync();
+                    foreach (var err in kv.Value.Errors) ;
                 }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!DocumentPermissionExists(documentPermission.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index), new { documentId = documentPermission.DocumentId });
 
+                ViewData["DocumentId"] = existing.DocumentId;
+                ViewData["RoleList"] = new SelectList(new List<SelectListItem>
+                {
+                    new SelectListItem { Value = "Editor", Text = "Editor" },
+                    new SelectListItem { Value = "Viewer", Text = "Viewer" }
+                }, "Value", "Text", documentPermission.Role.ToString());
+
+                existing.Role = documentPermission.Role;
+                return View(existing);
             }
-            ViewData["DocumentId"] = documentPermission.DocumentId;
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", documentPermission.UserId);
-            return View(documentPermission);
 
+            var before = existing.Role;
+            existing.Role = documentPermission.Role;
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Uprawnienie zostało zaktualizowane.";
+            return RedirectToAction(nameof(Index), new { documentId = existing.DocumentId });
         }
+
 
         // GET: DocumentPermissions/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -188,9 +249,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
                 return NotFound();
             }
 
-            var documentPermission = await _context.DocumentPermissions
-                .Include(d => d.User)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var documentPermission = await _context.DocumentPermissions.Include(d => d.User).FirstOrDefaultAsync(m => m.Id == id);
             if (documentPermission == null)
             {
                 return NotFound();
