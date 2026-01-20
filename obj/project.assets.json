@@ -9216,23 +9216,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Szymon\\.nuget\\packages\\": {},
+    "C:\\Users\\grzeg\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Projekt_Zaliczeniowy_PZ.csproj",
+      "projectUniqueName": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Projekt_Zaliczeniowy_PZ.csproj",
       "projectName": "Projekt_Zaliczeniowy_PZ",
-      "projectPath": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Projekt_Zaliczeniowy_PZ.csproj",
-      "packagesPath": "C:\\Users\\Szymon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\obj\\",
+      "projectPath": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\Projekt_Zaliczeniowy_PZ.csproj",
+      "packagesPath": "C:\\Users\\grzeg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\grzeg\\Conflu_placz\\Projekt_Zaliczeniowy_PZ\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Szymon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\grzeg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9241,7 +9241,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9258,9 +9257,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -9328,7 +9327,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

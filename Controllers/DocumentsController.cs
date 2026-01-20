@@ -9,32 +9,49 @@ using Microsoft.EntityFrameworkCore;
 using Projekt_Zaliczeniowy_PZ.Data;
 using Projekt_Zaliczeniowy_PZ.Models;
 using Projekt_Zaliczeniowy_PZ.DTOs;
+using Microsoft.AspNetCore.Authorization;
+using Projekt_Zaliczeniowy_PZ.Security;
+using Projekt_Zaliczeniowy_PZ.Models.Enums;
 
 namespace Projekt_Zaliczeniowy_PZ.Controllers
 {
+    [Authorize]
     public class DocumentsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IDocumentAccessService _access;
         private string GetUserId()
         {
             return User.FindFirstValue(ClaimTypes.NameIdentifier) ?? string.Empty;
         }
-        public DocumentsController(ApplicationDbContext context)
+        public DocumentsController(ApplicationDbContext context, IDocumentAccessService access)
         {
             _context = context;
+            _access = access;
         }
+
 
         // GET: Documents
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Documents.Where(e => e.CreatedById == GetUserId());
-            return View(await applicationDbContext.ToListAsync());
+            var userId = GetUserId();
 
+            var docs = await _context.Documents
+                .AsNoTracking()
+                .Where(d => d.CreatedById == userId
+                    || _context.DocumentPermissions.Any(p => p.DocumentId == d.Id && p.UserId == userId))
+                .ToListAsync();
+
+            return View(docs);
         }
+
 
         // GET: Documents/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (!await _access.CanViewAsync(id.Value, GetUserId()))
+                return Forbid();
+
             if (id == null)
             {
                 return NotFound();
@@ -61,27 +78,39 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,CreatedById")] DocumentDTO documentDTO)
+        public async Task<IActionResult> Create([Bind("Title,Content")] DocumentDTO documentDTO)
         {
-            Document document = new Document()
+            if (!ModelState.IsValid)
+                return View(documentDTO);
+
+            var document = new Document
             {
-                Id = documentDTO.Id,
                 Title = documentDTO.Title,
+                Content = documentDTO.Content,
                 CreatedById = GetUserId()
             };
 
-            if (ModelState.IsValid)
+            _context.Documents.Add(document);
+            await _context.SaveChangesAsync(); // <-- TU powstaje document.Id
+
+            _context.DocumentPermissions.Add(new DocumentPermission
             {
-                _context.Add(document);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(document);
+                DocumentId = document.Id,
+                UserId = GetUserId(),
+                Role = DocumentRole.Author
+            });
+            await _context.SaveChangesAsync(); // <-- zapis uprawnień
+
+            return RedirectToAction(nameof(Index));
         }
+
 
         // GET: Documents/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (!await _access.CanEditAsync(id.Value, GetUserId()))
+                return Forbid();
+
             if (id == null)
             {
                 return NotFound();
@@ -100,33 +129,35 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,CreatedById")] DocumentDTO documentDTO)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Content")] DocumentDTO documentDTO)
         {
             if (id != documentDTO.Id)
             {
                 return NotFound();
             }
 
-            Document document = new Document
-            {
-                Id = documentDTO.Id,
-                Title = documentDTO.Title,
-                CreatedById = GetUserId()
-            };
+            if (!await _access.CanEditAsync(id, GetUserId()))
+                return Forbid();
 
-            if (!DocumentExists(document.Id, GetUserId()))
+            var document = await _context.Documents.FirstOrDefaultAsync(d => d.Id == id);
+
+            if (document == null)
             {
                 return NotFound();
             }
 
+            document.Title = documentDTO.Title;
 
-            if (ModelState.IsValid)
+            document.Content = documentDTO.Content;
+
+            if (!ModelState.IsValid)
             {
-                _context.Update(document);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return View(documentDTO);
             }
-            return View(document);
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+
         }
 
         // GET: Documents/Delete/5
@@ -136,6 +167,8 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
             {
                 return NotFound();
             }
+            if (!await _access.IsOwnerAsync(id.Value, GetUserId()))
+                return Forbid();
 
             var document = await _context.Documents
                 .FirstOrDefaultAsync(m => m.Id == id);
@@ -153,6 +186,9 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var document = await _context.Documents.FindAsync(id);
+            if (!await _access.IsOwnerAsync(id, GetUserId()))
+                return Forbid();
+
             if (document != null)
             {
                 _context.Documents.Remove(document);
