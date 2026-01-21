@@ -11,10 +11,10 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.User)
+            Email użytkownika
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.User.Id)
+            @Model.User?.Email
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Role)
@@ -25,6 +25,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Zmień Role" asp-route-id="@Model?.Id">Zmień uprawnienia</a> |
+    <a asp-action="Index">Wróć do panelu uprawnieniń</a>
 </div>

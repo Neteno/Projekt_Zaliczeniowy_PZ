@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\views\\documents\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documents\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\views\\documentpermissions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documentpermissions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\views\\documents\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documents\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\views\\versionlogs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\versionlogs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\views\\documentpermissions\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documentpermissions\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\views\\documentpermissions\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documentpermissions\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\controllers\\documentpermissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:controllers\\documentpermissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\views\\documents\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documents\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|c:\\users\\szymon\\desktop\\studia\\studia_s5\\programowanie_zawansowane\\projekt_zaliczeniowy_pz\\views\\documentpermissions\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95C12830-5CEA-4E23-A7AF-9082EC2D5F90}|Projekt_Zaliczeniowy_PZ.csproj|solutionrelative:views\\documentpermissions\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 240,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,15 +46,80 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DocumentPermissionsController.cs",
+              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Controllers\\DocumentPermissionsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DocumentPermissionsController.cs",
+              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Controllers\\DocumentPermissionsController.cs",
+              "RelativeToolTip": "Controllers\\DocumentPermissionsController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAUwCMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T20:04:24.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Documents\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Details.cshtml",
-              "RelativeToolTip": "Views\\Documents\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\DocumentPermissions\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\DocumentPermissions\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\DocumentPermissions\\Create.cshtml",
+              "RelativeToolTip": "Views\\DocumentPermissions\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-21T19:32:51.005Z",
+              "WhenOpened": "2026-01-21T20:01:57.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Documents\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Documents\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T20:01:12.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\DocumentPermissions\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\DocumentPermissions\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\DocumentPermissions\\Delete.cshtml",
+              "RelativeToolTip": "Views\\DocumentPermissions\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T20:00:34.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\DocumentPermissions\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\DocumentPermissions\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\DocumentPermissions\\Edit.cshtml",
+              "RelativeToolTip": "Views\\DocumentPermissions\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T19:59:38.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\DocumentPermissions\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\DocumentPermissions\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\DocumentPermissions\\Details.cshtml",
+              "RelativeToolTip": "Views\\DocumentPermissions\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T19:59:37.16Z",
               "EditorCaption": ""
             },
             {
@@ -49,22 +130,9 @@
               "RelativeDocumentMoniker": "Views\\Documents\\Index.cshtml",
               "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Documents\\Index.cshtml",
               "RelativeToolTip": "Views\\Documents\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-21T19:32:02.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Versionlogs\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Versionlogs\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Szymon\\Desktop\\Studia\\Studia_S5\\Programowanie_Zawansowane\\Projekt_Zaliczeniowy_PZ\\Views\\Versionlogs\\Index.cshtml",
-              "RelativeToolTip": "Views\\Versionlogs\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-21T16:00:36.091Z",
+              "WhenOpened": "2026-01-21T19:59:24.088Z",
               "EditorCaption": ""
             }
           ]

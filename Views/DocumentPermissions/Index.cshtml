@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Uprawnienia do dokumentów</h1>
 @if (TempData["Success"] != null)
 {
     <div class="alert alert-success">@TempData["Success"]</div>
@@ -19,7 +19,7 @@
 <p>
     @if (ViewBag.DocumentId != null)
     {
-        <a asp-action="Create" asp-route-documentId="@ViewBag.DocumentId">Create New</a>
+        <a asp-action="Create" asp-route-documentId="@ViewBag.DocumentId">Nadaj uprawnienia do dokumentu</a>
     }
     else
     {
@@ -50,9 +50,9 @@
                 @Html.DisplayFor(modelItem => item.Role)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edytuj</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Szczegóły</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Usuń</a>
             </td>
         </tr>
 }
