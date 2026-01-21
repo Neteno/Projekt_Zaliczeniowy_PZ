@@ -38,7 +38,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         {
             var userId = GetUserId();
 
-            var docs = await _context.Documents.AsNoTracking().Where(d => d.CreatedById == userId || _context.DocumentPermissions.Any(p => p.DocumentId == d.Id && p.UserId == userId)).ToListAsync();
+            var docs = await _context.Documents.AsNoTracking().Include(d => d.CreatedBy).Where(d => d.CreatedById == userId || _context.DocumentPermissions.Any(p => p.DocumentId == d.Id && p.UserId == userId)).ToListAsync();
 
             return View(docs);
         }
@@ -169,6 +169,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
                 return Forbid();
 
             var document = await _context.Documents
+                .Include(d => d.CreatedBy)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (document == null)
             {

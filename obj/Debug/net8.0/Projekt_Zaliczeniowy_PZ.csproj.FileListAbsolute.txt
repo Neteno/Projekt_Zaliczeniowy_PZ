@@ -895,3 +895,6 @@ C:\Users\grzeg\placz_conflu\Projekt_Zaliczeniowy_PZ\obj\Debug\net8.0\refint\Proj
 C:\Users\grzeg\placz_conflu\Projekt_Zaliczeniowy_PZ\obj\Debug\net8.0\Projekt_Zaliczeniowy_PZ.pdb
 C:\Users\grzeg\placz_conflu\Projekt_Zaliczeniowy_PZ\obj\Debug\net8.0\Projekt_Zaliczeniowy_PZ.genruntimeconfig.cache
 C:\Users\grzeg\placz_conflu\Projekt_Zaliczeniowy_PZ\obj\Debug\net8.0\ref\Projekt_Zaliczeniowy_PZ.dll
+C:\Users\Szymon\Desktop\Studia\Studia_S5\Programowanie_Zawansowane\Projekt_Zaliczeniowy_PZ\bin\Debug\net8.0\AngleSharp.dll
+C:\Users\Szymon\Desktop\Studia\Studia_S5\Programowanie_Zawansowane\Projekt_Zaliczeniowy_PZ\bin\Debug\net8.0\AngleSharp.Css.dll
+C:\Users\Szymon\Desktop\Studia\Studia_S5\Programowanie_Zawansowane\Projekt_Zaliczeniowy_PZ\bin\Debug\net8.0\HtmlSanitizer.dll

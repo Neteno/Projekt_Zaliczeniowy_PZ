@@ -6,7 +6,7 @@ namespace Projekt_Zaliczeniowy_PZ.DTOs
     {
         public int Id { get; set; }
         public string Title { get; set; } = string.Empty;
-        public string Content { get; set; } = string.Empty;
+        public string? Content { get; set; }
 
         public DocumentDTO() { }
         public DocumentDTO(Document document)
