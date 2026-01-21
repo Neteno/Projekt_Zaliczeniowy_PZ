@@ -22,7 +22,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         // GET: Versionlogs
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.VersionLogs.Include(v => v.Document);
+            var applicationDbContext = _context.VersionLogs.Include(v => v.Document).Include(v => v.User);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -34,7 +34,10 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
                 return NotFound();
             }
 
-            var versionlog = await _context.VersionLogs.Include(v => v.Document).FirstOrDefaultAsync(m => m.Id == id);
+            var versionlog = await _context.VersionLogs
+                .Include(v => v.Document)
+                .Include(v => v.User)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (versionlog == null)
             {
                 return NotFound();
@@ -47,6 +50,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         public IActionResult Create()
         {
             ViewData["DocumentId"] = new SelectList(_context.Documents, "Id", "Id");
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
             return View();
         }
 
@@ -55,7 +59,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,DocumentId")] Versionlog versionlog)
+        public async Task<IActionResult> Create([Bind("Id,DocumentId,UserId,CreatedAt,Description")] Versionlog versionlog)
         {
             if (ModelState.IsValid)
             {
@@ -64,6 +68,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["DocumentId"] = new SelectList(_context.Documents, "Id", "Id", versionlog.DocumentId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", versionlog.UserId);
             return View(versionlog);
         }
 
@@ -81,6 +86,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
                 return NotFound();
             }
             ViewData["DocumentId"] = new SelectList(_context.Documents, "Id", "Id", versionlog.DocumentId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", versionlog.UserId);
             return View(versionlog);
         }
 
@@ -89,7 +95,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,DocumentId")] Versionlog versionlog)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,DocumentId,UserId,CreatedAt,Description")] Versionlog versionlog)
         {
             if (id != versionlog.Id)
             {
@@ -117,6 +123,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["DocumentId"] = new SelectList(_context.Documents, "Id", "Id", versionlog.DocumentId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", versionlog.UserId);
             return View(versionlog);
         }
 
@@ -128,7 +135,10 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
                 return NotFound();
             }
 
-            var versionlog = await _context.VersionLogs.Include(v => v.Document).FirstOrDefaultAsync(m => m.Id == id);
+            var versionlog = await _context.VersionLogs
+                .Include(v => v.Document)
+                .Include(v => v.User)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (versionlog == null)
             {
                 return NotFound();

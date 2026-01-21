@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Projekt_Zaliczeniowy_PZ.Data;
 
@@ -10,9 +11,11 @@ using Projekt_Zaliczeniowy_PZ.Data;
 namespace Projekt_Zaliczeniowy_PZ.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260121212122_add_logs")]
+    partial class add_logs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.23");
@@ -281,15 +284,9 @@ namespace Projekt_Zaliczeniowy_PZ.Migrations
                     b.Property<int>("DocumentId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.HasKey("Id");
 
                     b.HasIndex("DocumentId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("VersionLogs");
                 });
@@ -383,15 +380,7 @@ namespace Projekt_Zaliczeniowy_PZ.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Projekt_Zaliczeniowy_PZ.Models.AppUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Document");
-
-                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

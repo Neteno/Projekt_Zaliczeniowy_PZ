@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Projekt_Zaliczeniowy_PZ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d541236c06c277f62600289556941550b38c76e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e7c3afe2bee1630b6d6d108f3445e50013ac56d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Projekt_Zaliczeniowy_PZ")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Projekt_Zaliczeniowy_PZ")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

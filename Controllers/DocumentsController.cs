@@ -101,6 +101,16 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
             });
             await _context.SaveChangesAsync();
 
+            // Log
+            _context.VersionLogs.Add(new Versionlog
+            {
+                DocumentId = document.Id,
+                CreatedAt = DateTime.Now,
+                UserId = GetUserId(),
+                Description = $"UserEmail: {User?.Identity?.Name} utworzył dokument \"{document.Title}\""
+            });
+            await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
 
@@ -154,6 +164,17 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
             }
 
             await _context.SaveChangesAsync();
+
+            // Log
+            _context.VersionLogs.Add(new Versionlog
+            {
+                DocumentId = document.Id,
+                CreatedAt = DateTime.Now,
+                UserId = GetUserId(),
+                Description = $"UserEmail: {User?.Identity?.Name} edytował dokument \"{document.Title}\""
+            });
+            await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
 
         }

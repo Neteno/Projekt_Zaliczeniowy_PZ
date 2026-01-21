@@ -146,7 +146,16 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
                 _context.Add(documentPermission);
             }
 
+            // Log
+            _context.VersionLogs.Add(new Versionlog
+            {
+                DocumentId = documentPermission.DocumentId,
+                CreatedAt = DateTime.Now,
+                UserId = GetUserId(),
+                Description = $"Nadał uprawnienia {documentPermission.Role} użytkownikowi {documentPermission.UserId} w Dokumencie {documentPermission.DocumentId}"
+            });
             await _context.SaveChangesAsync();
+
             TempData["Success"] = "Uprawnienie zostało zapisane.";
 
             return RedirectToAction(nameof(Index), new { documentId = documentPermission.DocumentId });
@@ -234,6 +243,15 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
 
             var before = existing.Role;
             existing.Role = documentPermission.Role;
+
+            // Log
+            _context.VersionLogs.Add(new Versionlog
+            {
+                DocumentId = existing.DocumentId,
+                CreatedAt = DateTime.Now,
+                UserId = GetUserId(),
+                Description = $"Zmienił uprawnienia użytkownikowi {documentPermission.UserId} na {documentPermission.Role} w Dokumencie {existing.DocumentId}"
+            });
             await _context.SaveChangesAsync();
 
             TempData["Success"] = "Uprawnienie zostało zaktualizowane.";
@@ -291,7 +309,17 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
             var documentId = documentPermission.DocumentId;
 
             _context.DocumentPermissions.Remove(documentPermission);
+
+            // Log
+            _context.VersionLogs.Add(new Versionlog
+            {
+                DocumentId = documentPermission.DocumentId,
+                CreatedAt = DateTime.Now,
+                UserId = GetUserId(),
+                Description = $"Użytkownik {documentPermission.UserId} traci dostęp do Dokumentu {documentPermission.DocumentId} "
+            });
             await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index), new { documentId });
 
         }
