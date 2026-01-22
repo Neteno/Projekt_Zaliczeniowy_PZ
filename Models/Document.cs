@@ -9,7 +9,7 @@ namespace Projekt_Zaliczeniowy_PZ.Models
         [MaxLength(50, ErrorMessage = "Nazwa nie może przekraczać 50 znaków")]
         [Display(Name = "Nazwa dokumentu")]
         public string Title { get; set; } = string.Empty;
-        [Display(Name = "Sesja Zawartość Dokumentu")]
+        [Display(Name = "Zawartość Dokumentu")]
         public string Content { get; set; } = string.Empty;
         [Required]
         [Display(Name = "Autor")]
