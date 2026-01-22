@@ -107,7 +107,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
                 DocumentId = document.Id,
                 CreatedAt = DateTime.Now,
                 UserId = GetUserId(),
-                Description = $"UserEmail: {User?.Identity?.Name} utworzył dokument \"{document.Title}\""
+                Description = $"{User?.Identity?.Name} utworzył dokument \"{document.Title}\""
             });
             await _context.SaveChangesAsync();
 
@@ -171,7 +171,7 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
                 DocumentId = document.Id,
                 CreatedAt = DateTime.Now,
                 UserId = GetUserId(),
-                Description = $"UserEmail: {User?.Identity?.Name} edytował dokument \"{document.Title}\""
+                Description = $"{User?.Identity?.Name} edytował dokument \"{document.Title}\""
             });
             await _context.SaveChangesAsync();
 

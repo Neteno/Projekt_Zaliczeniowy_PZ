@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -18,12 +19,26 @@ namespace Projekt_Zaliczeniowy_PZ.Controllers
         {
             _context = context;
         }
+        private string GetUserId()
+        {
+            return User.FindFirstValue(ClaimTypes.NameIdentifier) ?? string.Empty;
+        }
 
         // GET: Versionlogs
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.VersionLogs.Include(v => v.Document).Include(v => v.User);
-            return View(await applicationDbContext.ToListAsync());
+            var userId = GetUserId();
+
+            var logs = _context.VersionLogs
+                .Include(v => v.Document)
+                .Include(v => v.User)
+                .Where(v => v.Document.CreatedById == userId || _context.DocumentPermissions.Any(dp =>
+                        dp.DocumentId == v.DocumentId &&
+                        dp.UserId == userId
+                    )
+                );
+
+            return View(await logs.ToListAsync());
         }
 
         // GET: Versionlogs/Details/5
